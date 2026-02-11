@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Nora ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 500px;
+            width: 100%;
+            animation: fadeIn 1s ease;
+        }
+        h1 {
+            color: #ff6b8b;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+        }
+        p {
+            color: #555;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        .heart {
+            color: #ff6b8b;
+            font-size: 4rem;
+            margin: 20px 0;
+            animation: heartbeat 1.2s infinite;
+        }
+        .button {
+            display: inline-block;
+            background: #ff6b8b;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background: #ff4a6e;
+            transform: scale(1.05);
+        }
+        .button.no {
+            background: #ccc;
+            color: #666;
+        }
+        .button.no:hover {
+            background: #bbb;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 30px;
+            font-size: 1.5rem;
+            color: #ff4a6e;
+            font-weight: bold;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        footer {
+            margin-top: 30px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>Dear Nora 💌</h1>
+        <p>
+            This Valentine’s Day, I was wondering… <br>
+            Would you make me the happiest person and be my Valentine? 🌹
+        </p>
+        <p><em>You totally have the right to say no… but my heart hopes you say yes! 😊</em></p>
+        
+        <div>
+            <button class="button" id="yesBtn">YES! 💖</button>
+            <button class="button no" id="noBtn">Maybe? 😅</button>
+        </div>
+        
+        <div class="hidden-message" id="message">
+            YAY! You just made my day! Can't wait to celebrate with you! 🥂✨
+        </div>
+        
+        <footer>
+            Made with ❤️ for Nora · Valentine's Special
+        </footer>
+    </div>
+
+    <script>
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const message = document.getElementById('message');
+
+        yesBtn.addEventListener('click', function() {
+            message.style.display = 'block';
+            message.innerHTML = "YAY! You just made my day! Can't wait to celebrate with you! 🥂✨";
+            yesBtn.style.display = 'none';
+            noBtn.style.display = 'none';
+        });
+
+        noBtn.addEventListener('click', function() {
+            message.style.display = 'block';
+            message.innerHTML = "Awww, it's okay! Still think you're amazing 🌟 <br> Maybe next year? 😉";
+            yesBtn.style.display = 'none';
+            noBtn.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
